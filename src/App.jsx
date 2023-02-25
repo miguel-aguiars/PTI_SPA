@@ -1,34 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import CardProduto from "./components/CardProduto";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+
+  const stewedCabbage = {
+    name: "Stewed Cabbage with sauce",
+    price: "$5.90",
+    image: "https://st2.depositphotos.com/1924223/5984/i/950/depositphotos_59849831-stock-photo-stewed-cabbage.jpg",
+    description: "Stewed Cabbage with sauce"
+  };
+
+  const pureeSoup = {
+    name: "Puree soup with turkey pieces",
+    price: "$7.55",
+    image: "https://static.onecms.io/wp-content/uploads/sites/44/2021/08/05/creamy-turkey-soup.jpg",
+    description: "Puree soup with turkey pieces"
+  };
+
+  const chickenWithVegetables = {
+    name: "Chicken with vegetables",
+    price: "$3.39",
+    image: "https://img.buzzfeed.com/video-api-prod/assets/a376298fd6154cda98242a7c49b153ce/THUMBNAIL_A.jpg",
+    description: "Chicken with vegetables"
+  };
+
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Produtos</h1>
+      <CardProduto produto={stewedCabbage} />
+      <CardProduto produto={pureeSoup} />
+      <CardProduto produto={chickenWithVegetables} />
     </div>
-  )
+
+  );
 }
 
-export default App
+
