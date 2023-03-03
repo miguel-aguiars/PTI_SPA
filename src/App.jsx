@@ -1,6 +1,10 @@
 import './App.css'
 import CardProduto from "./components/CardProduto";
 
+function adicionarCarrinho() {
+  setCarrinho([...carrinho, { name, price }]);
+}
+
 export default function App() {
 
   const stewedCabbage = {
@@ -8,6 +12,7 @@ export default function App() {
     price: "$5.90",
     image: "https://st2.depositphotos.com/1924223/5984/i/950/depositphotos_59849831-stock-photo-stewed-cabbage.jpg",
     description: "Stewed Cabbage with sauce"
+    
   };
 
   const pureeSoup = {
@@ -28,9 +33,12 @@ export default function App() {
   return (
     <div className="App">
       <h1>Produtos</h1>
+      <section className='productCard'>
       <CardProduto produto={stewedCabbage} />
       <CardProduto produto={pureeSoup} />
       <CardProduto produto={chickenWithVegetables} />
+      </section>
+      
     </div>
 
   );

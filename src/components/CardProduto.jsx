@@ -7,6 +7,7 @@ export default function CardProduto(props) {
             <img src={props.produto.image} alt={props.produto.description }/>
             <h2>{props.produto.name}</h2>
             <span>{props.produto.price}</span>
+            
         </div>
 
     )
