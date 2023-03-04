@@ -1,7 +1,8 @@
 .CardProduto {
-    background-color: #f7f7f7;
+    background-color: #818181;
     width: fit-content;
     height: fit-content;
-    border-radius: 10px;
+    border-radius: 15px;
+    border-color: #030303;
     border: #030303;
 }
